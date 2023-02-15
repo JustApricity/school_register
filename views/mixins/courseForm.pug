@@ -4,7 +4,7 @@ mixin courseForm(course, departments, saveURl, cancelURL)
         form(action=saveURL method='post')
             div.form-input
                 label(for='name') Course Title
-                input(id='name' name='name' value='course.name')
+                input(id='name' name='name' value=course.name)
 
             div.form-input
                 label(for='instructor_name') Instructor
