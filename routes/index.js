@@ -15,6 +15,7 @@ router.post('/courses/edit/:id', courseController.updateCourse);
 router.get('/courses/add', courseController.renderAddForm);
 router.post('/courses/add', courseController.addCourse);
 router.post('/courses/delete/:id', courseController.deleteCourse);
+router.post('/courses/:courseId/enroll', courseController.enrollStudent);
 
 
 router.get('/students', studentController.viewAll);
@@ -24,6 +25,7 @@ router.post('/students/edit/:id', studentController.updateStudent);
 router.get('/students/add', studentController.renderAddForm);
 router.post('/students/add', studentController.addStudent);
 router.get('/students/delete/:id', studentController.deleteStudent);
-router.post('/students/:studentId/enroll/', studentController.enrollStudent);
-router.get('/students/:studentId/removeCourse/:courseId', studentController.removeCourse)
+router.post('/students/:studentId/enroll', studentController.enrollStudent);
+router.get('/students/:studentId/removeCourse/:courseId', studentController.removeCourse);
+router.get('/courses/:courseId/removeStudent/:studentId', courseController.removeStudent);
 module.exports = router;
