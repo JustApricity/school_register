@@ -5,7 +5,7 @@ const studentController = require('../controllers/studentController.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/courses');
 });
 
 router.get('/courses', courseController.viewAll);
